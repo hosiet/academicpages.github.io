@@ -202,6 +202,11 @@
     color: var(--global-text-color);
     cursor: pointer;
     z-index: 100;
+
+    &:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 4px;
+    }
   }
 
   .visible-links {
