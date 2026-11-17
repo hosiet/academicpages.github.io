@@ -83,6 +83,7 @@ author:
   zhihu            : # Username
 
 # Publication Category - The following the list of publication categories and their headings
+# Category keys are also section IDs, e.g. /publications/#manuscripts.
 publication_category:
   books:
     title: 'Books'

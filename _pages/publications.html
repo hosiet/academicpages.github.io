@@ -20,7 +20,12 @@ author_profile: true
         {% continue %}
       {% endif %}
       {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
+        {% assign category_id = category[0] | escape | replace: '\', '&#92;' | replace: '}', '&#125;' %}
+        {% capture category_heading %}## {{ category[1].title | normalize_whitespace }}
+{: id="{{ category_id }}"}
+        {% endcapture %}
+        {{ category_heading | markdownify }}
+        <hr />
         {% assign title_shown = true %}
       {% endunless %}
       {% include archive-single.html %}
